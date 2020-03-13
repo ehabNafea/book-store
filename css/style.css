@@ -1,0 +1,376 @@
+/* general Style */
+.padding {
+    padding: 5rem 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* End general Style */
+
+/* Start Navigation Style */
+.book-menu{
+    width: 65px;
+    height: 65px;
+    background-color: #777;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 500;
+    top: 1.5rem;
+    right: 1.8rem;
+    outline: none !important;
+    transition: all .5s;
+}
+
+.line1,
+.line2,
+.line3{
+    width: 2rem;
+    height: 2px;
+    background-color: #fefefe;
+    margin: 5px 4px;
+    transition: all .5s;
+}
+
+.menu{
+    background: rgba(35, 37, 40, .98);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 200;
+    top: 1.5rem;
+    right: 1.8rem;
+    transition: all .5s;
+}
+
+.change .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+    background-color: #777;
+}
+
+.change  .line2{
+    opacity: 0;
+}
+
+.change  .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+    background-color: #777;
+}
+
+.change  .book-menu{
+    background-color: #eef0eb;
+}
+
+.change  .menu{
+    transform: scale(150);
+}
+
+.menu-content{
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+}
+
+.link-item{
+    font-size: 1.5rem;
+    color: #fefefe;
+    border-bottom: 1px solid #fefefe;
+}
+
+.link-item:hover{
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    border-radius: 50% 50% 0 0 ;
+    border-bottom: 1px solid #fff;
+
+}
+
+/* End Of Navigation Style */
+
+/* Start Header Style */
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../img/header-bg.jpeg') fixed center no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.banner-heading::first-letter {
+    font-family: 'Great Vibes', cursive;
+    font-size: 10rem;
+    margin-right: 1.2rem;
+}
+
+.banner-heading img {
+    animation: heart 2s infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(1.05);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* End Header Style */
+
+/* Start commom title Style */
+.common-title {
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px #aaa;
+    transition: all .5s;
+
+}
+
+.common-title::first-letter {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    margin-right: .8rem;
+    font-style: normal;
+    display: inline-block;
+}
+
+.common-title:hover {
+    transform: translate(-5px, -3px);
+    text-shadow: 2px 5px 20px #aaa;
+}
+
+/* End commom title Style */
+
+/* Start Gallery Section Style */
+
+.gallery-img:hover {
+    backface-visibility: hidden;
+    transform: scale(1.05);
+    transition: all .5s;
+}
+
+.first-row {
+    transform: translateX(-300px);
+    opacity: 0;
+    transition: all 2.5s;
+}
+
+.second-row {
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 2.5s;
+}
+
+.change .first-row,
+.change .second-row {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* End Gallery Section Style */
+
+/* Start famous writer Style */
+.famous-writer {
+    background: linear-gradient(rgba(250, 250, 250, .8), rgba(250, 250, 250, .8)),
+        url('../img/writers-bg.jpeg') fixed center no-repeat;
+    background-size: cover;
+}
+
+/* End famous writer Style */
+
+/* start Suggested Bookd Style */
+
+.suggested-book {
+    height: 100vh;
+    background: url('../img/wood-bg.jpeg') fixed center no-repeat;
+    background-size: cover;
+}
+
+.books {
+    height: 50vh;
+    position: relative;
+}
+
+.book {
+    position: absolute;
+    width: 30%;
+    box-shadow: 5px 5px 15px #444;
+    border-right: 5px solid #777;
+    border-bottom: 10px solid #444;
+    transition: all .7s ease-in-out;
+}
+
+.book-1 {
+    top: 5%;
+    left: 20%;
+    transform: rotate(-45deg);
+}
+
+.book-2 {
+    top: 20%;
+    left: 50%;
+    transform: rotate(40deg);
+}
+
+.book-3 {
+    top: 40%;
+    left: 40%;
+    transform: rotate(55deg);
+}
+
+.book-4 {
+    top: 35%;
+    left: 10%;
+    transform: rotate(-38deg);
+}
+
+.book:hover {
+    transform: scale(1.3) rotateX(20deg);
+    z-index: 50;
+    box-shadow: 5px 5px 25px #444;
+    border-right: 10px solid #ddd;
+    border-bottom: 20px solid #bbb;
+}
+
+/* End Suggested Bookd Style */
+
+/* Start popular books Style */
+.popular-books {
+    position: relative;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .4;
+}
+
+.bg-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.rotate {
+    perspective: 100rem;
+}
+
+.book-card {
+    position: relative;
+    box-shadow: 5px 15px 50px #aaa;
+    max-width: 420px;
+    overflow: hidden;
+    transition: all .8s;
+}
+
+.back{
+    position: absolute;
+    top: -100%;
+    background-color: #fefefe;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: top .8s, opacity .4s;
+    opacity: 0;
+}
+
+.rotate:hover .book-card {
+    transform: rotateY(180deg);
+}
+
+.rotate:hover .back {
+    opacity: 1;
+    top: 0;
+    user-select: auto;
+    pointer-events: auto;
+}
+
+/* End  popular books Style */
+
+/* Start contact Style */
+.contact{
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url('../img/header-bg.jpeg') fixed center no-repeat ;
+    background-size: cover;
+}
+
+.items-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url('../img/items-wrapper-bg.jpg') center no-repeat ;
+    border-radius: 5px;
+}
+.floating-item {
+    background: rgba(0, 0, 0, .65);
+    border-radius: 5px;
+}
+
+.first-item {
+    animation: float 15s infinite;
+}
+
+.second-item {
+    animation: float 20s ease-in infinite;
+}
+
+.third-item {
+    animation: float 40s linear infinite;
+}
+
+.fourth-item {
+    animation: float 30s  infinite;
+}
+
+.fifth-item {
+    animation: float 25s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-60px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    background: transparent;
+    font-size: 18px;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: none;
+}
+.contact-form textarea{
+    resize: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: rgba(250, 250, 250, .8);
+    box-shadow: none;
+}
+/* End contact Style */
